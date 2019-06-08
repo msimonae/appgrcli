@@ -11,7 +11,7 @@
 </div> -->
 
 <div class="container body-content">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
       <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -22,12 +22,10 @@
     <img src="/images/banner1.png" alt="ASP.NET" class="img-responsive" />
     <!--<img src="/images/imagem01.jpeg" alt="ASP.NET" class="img-responsive" />  -->
     <div class="carousel-caption" role="option">
-    <p>
-    <p>A plataforma GRCLI foi construída em Ruby on Rails MVC</p>
-    <p>e pode ser hospedada em qualquer ambiente.</p></br>
-    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-    Leia mais
-    </a>
+    </br>
+    <p>Plataforma Digital GRCLI </p>
+    <p>Gestão de Risco na Nuvem</p></br>
+      <button class = "btn btn-default"> <%= link_to 'Cadastre Agora', new_user_path %></button>
     </p>
     </div>
   </div>
@@ -37,11 +35,9 @@
   <div class="carousel-caption" role="option">
 
   <p>
-  <p>Existem muitas tecnologias envolvidas no</p>
-  <p>desenvolvimento da Plataforma Digital.</p> </br>
-    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-  Leia mais
-    </a>
+  <p>GRCLI foi construída em Ruby on Rails MVC<</p>
+  <p>e pode ser hospedada em qualquer ambiente.</p> </br>
+     <button class = "btn btn-default"> <%= link_to 'Cadastre Agora', new_user_path %></button>
   </p>
   </div>
   </div>
@@ -49,11 +45,9 @@
     <img src="/images/banner3.png" alt="Microsoft Azure" class="img-responsive" />
     <div class="carousel-caption" role="option">
   <p>
-  <p> Utilizamos as bibliotecas da NuGet e npm, </p>
-  <p>e automatizamos tarefas usando Grunt or Gulp.</p></br>
-  <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-  Leia mais
-  </a>
+  <p> Existem muitas tecnologias envolvidas no</p>
+  <p>desenvolvimento da Plataforma Digital.</p></br>
+      <button class = "btn btn-default"> <%= link_to 'Cadastre Agora', new_user_path %></button>
   </p>
   </div>
   </div>
@@ -96,7 +90,8 @@
         <ul>
             <li><a href="tel:">Se preferir ligar +55 11 991208880</a></li>
             <li><a href="mailto:msimonae@gmail.com?cc=msimonae@gmail.com&bcc=msimonae@gmail.com&subject=Dúvidas%20da%20Plataforma&body=Você%20foi%20Convidado%20pela%20DLWS">Se preferir solicitar informações por E-mail.</a></li>
-            <li><a href="~/Account/Register">Comece com um cadastro de uma conta e senha</a></li>
+            <li><a><%= link_to 'Comece com um cadastro de uma conta e senha', new_user_path %></a></li>
+
         </ul>
     </div>
 
