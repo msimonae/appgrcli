@@ -12,4 +12,6 @@ class User < ApplicationRecord
                                       uniqueness: { case_sensitive: true }
 
 
+  
+  has_many :contacts
 end
