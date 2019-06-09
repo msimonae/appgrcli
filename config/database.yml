@@ -20,6 +20,7 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  prepared_statements: false
   username: postgres
   password: Minoru279740
   host: localhost
@@ -85,5 +86,5 @@ test:
 production:
   <<: *default
   database: appgrcli_production
-  username: appgrcli
-  password: <%= ENV['APPGRCLI_DATABASE_PASSWORD'] %>
+  #username: appgrcli
+  #password: <%= ENV['APPGRCLI_DATABASE_PASSWORD'] %>
