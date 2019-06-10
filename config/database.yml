@@ -9,6 +9,8 @@
 # On Windows:
 #   gem install pg
 #       Choose the win32 build.
+
+
 #       Install PostgreSQL and put its /bin directory on your path.
 #
 # Configure Using Gemfile
@@ -21,14 +23,30 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   prepared_statements: false
-  username: postgres
-  password: Minoru279740
-  host: localhost
-  port: 5432
+
+#  username: postgres
+#  password: Minoru279740
+#  host: localhost
+#  port: 5432
+
+# MySQL
+# Configure Using Gemfile
+#gem mysql2
+
+
+#default: &default
+#  adapter: mysql2
+#  database: appgrclimysql
+#  username: appgrclimysql
+#  password: M!noru279740
+#  host: den1.mysql4.gear.host
+#  socket: /tmp/mysql.sock
 
 development:
   <<: *default
   database: appgrcli_development
+
+#  database: appgrclimysql
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -60,9 +78,10 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: appgrcli_test
+
+#test:
+#  <<: *default
+#  database: appgrcli_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -83,8 +102,10 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
 production:
   <<: *default
-  database: appgrcli_production
+
   #username: appgrcli
   #password: <%= ENV['APPGRCLI_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

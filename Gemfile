@@ -5,8 +5,13 @@ ruby '2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
+
 # Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
+#gem 'pg', '>= 0.18', '< 2.0'
+
+#Use MySQL as database for Active Record
+#gem 'mysql2'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use JQuery
@@ -38,6 +43,14 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+
+group :development, :test do
+  gem 'sqlite3'
+end
+group :production do
+gem 'pg', '>= 0.18', '< 2.0'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
